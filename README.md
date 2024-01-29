@@ -1,6 +1,8 @@
 # Missing-Money-Matters
 The "Missing Money Matters" project is an engaging SQL and NoSQL training exercise where I played the role of a data analyst for WSDA Music. Tasked with investigating financial discrepancies in the company's records, I utilized SQLite and MongoDB to analyze and manipulate data.
 
+![image](https://github.com/nmn-pandey/Missing-Money-Matters/assets/20767834/d1fef573-6723-474b-ad9b-be26aaca0bbc)
+
 ## Overview
 
 This repository contains my solutions to the "Missing Money Matters" project, a part of the SQL Essential Training series by LinkedIn Learning, using both SQL (SQLite) and NoSQL (MongoDB) databases.
