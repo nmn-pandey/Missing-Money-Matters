@@ -63,4 +63,39 @@ customers = list(db.Invoice.aggregate(pipeline))
 
 # Print the results
 for customer in customers:
-    print(customer)
+    full_name = f"{customer['_id']['FirstName']} {customer['_id']['LastName']}"
+    address = customer['Address']
+    city = customer['_id'].get('City', '')
+    state = customer['_id'].get('State', '')
+    email = customer['Email']
+
+    print(f"Name: {full_name}")
+    print(f"Address: {address}")
+    print(f"City: {city}")
+    print(f"State: {state}")
+    print(f"Email: {email}")
+    print()
+
+
+# TO SHOW RESULTS IN TABULAR FORM
+"""
+from tabulate import tabulate
+
+# Execute the aggregation pipeline
+customers = list(db.Invoice.aggregate(pipeline))
+
+# Prepare data for tabulate
+table_data = []
+for customer in customers:
+    full_name = f"{customer['_id']['FirstName']} {customer['_id']['LastName']}"
+    address = customer['Address']
+    city = customer['_id'].get('City', '')
+    state = customer['_id'].get('State', '')
+    email = customer['Email']
+
+    table_data.append([full_name, address, city, state, email])
+
+# Print results in tabular format
+headers = ["Full Name", "Address", "City", "State", "Email"]
+print(tabulate(table_data, headers=headers, tablefmt="grid"))
+"""
